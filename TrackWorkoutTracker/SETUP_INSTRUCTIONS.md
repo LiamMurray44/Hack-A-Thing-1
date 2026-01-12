@@ -1,71 +1,119 @@
-# TrackWorkoutTracker - Setup Instructions
+# 🚀 TrackWorkoutTracker - Complete Setup Guide
 
 ## Phase 1: Core Foundation Complete!
 
 All the Swift code files for Phase 1 have been created. Now you need to create the Xcode project and add these files to it.
 
-## Step 1: Create Xcode Project (2 minutes)
+---
 
-1. **Open Xcode** on your Mac
+## STEP 1: Create the Xcode Project Shell (2 minutes)
 
-2. **Create New Project**:
-   - Click "Create New Project" (or File > New > Project)
-   - Select **iOS** tab at the top
-   - Choose **App** template
-   - Click **Next**
+### 1.1 Open Xcode
+- Find and open the **Xcode** app on your Mac
 
-3. **Configure Project**:
-   - **Product Name**: `TrackWorkoutTracker`
-   - **Team**: Select your Apple ID
-   - **Organization Identifier**: `com.yourname` (or whatever you prefer)
-   - **Interface**: **SwiftUI** ⚠️ IMPORTANT
-   - **Storage**: **SwiftData** ⚠️ IMPORTANT
-   - **Language**: **Swift** ⚠️ IMPORTANT
-   - **Include Tests**: You can check or uncheck (optional)
-   - Click **Next**
+### 1.2 Start a New Project
+You'll see a welcome screen. Click the big **"Create New Project"** button.
 
-4. **Save Location**:
-   - Navigate to `/Users/liammurray/Hack-A-Thing-1/`
-   - **IMPORTANT**: Uncheck "Create Git repository" (you already have one)
-   - Click **Create**
+(Or if Xcode is already open: **File** menu → **New** → **Project**)
 
-## Step 2: Delete Default Files (1 minute)
+### 1.3 Choose the Template
+- At the top, make sure **iOS** is selected (not macOS, watchOS, etc.)
+- Click on **App** (it has a phone icon)
+- Click **Next** button (bottom right)
 
-Xcode creates some default files we don't need. In the Project Navigator (left sidebar):
+### 1.4 Fill Out the Project Settings
+You'll see a form. Fill it out EXACTLY like this:
 
-1. **Right-click** on `ContentView.swift` (the default one) → **Delete** → Choose **"Move to Trash"**
-2. **Right-click** on `Item.swift` (if it exists) → **Delete** → Choose **"Move to Trash"**
-3. **Keep** `TrackWorkoutTrackerApp.swift` but we'll replace it
+| Field | What to Enter | Why It Matters |
+|-------|---------------|----------------|
+| **Product Name** | `TrackWorkoutTracker` | Must match exactly |
+| **Team** | Select your Apple ID | For running on devices |
+| **Organization Identifier** | `com.yourname` | Any unique ID works |
+| **Interface** | **SwiftUI** | ⚠️ CRITICAL - Must be SwiftUI! |
+| **Storage** | **SwiftData** | ⚠️ CRITICAL - Must be SwiftData! |
+| **Language** | **Swift** | ⚠️ CRITICAL - Must be Swift! |
+| **Include Tests** | Check or uncheck | Doesn't matter for now |
 
-## Step 3: Add Your Code Files (5 minutes)
+Click **Next**
 
-Now add the files I created:
+### 1.5 Choose Where to Save
+- Navigate to: `/Users/liammurray/Hack-A-Thing-1/`
+- **IMPORTANT**: ❌ **Uncheck** "Create Git repository" (you already have one)
+- Click **Create**
 
-### Method: Drag and Drop (Easiest)
+Xcode will now create the project and open it.
 
-1. **Open Finder** and navigate to:
-   `/Users/liammurray/Hack-A-Thing-1/TrackWorkoutTracker/`
+---
 
-2. **In Xcode**, right-click on the `TrackWorkoutTracker` folder (the blue one at the top of the project navigator)
+## STEP 2: Clean Up Default Files (1 minute)
 
-3. **For each folder** (Models, Views, Services, etc.):
-   - **Drag the folder** from Finder into Xcode's project navigator
-   - When the dialog appears:
-     - ✅ Check "Copy items if needed"
-     - ✅ Check "Create groups"
-     - ✅ Make sure your target is selected
-     - Click **Finish**
+Xcode created some sample files we don't need. Let's delete them.
 
-4. **Replace TrackWorkoutTrackerApp.swift**:
-   - Delete the existing one Xcode created
-   - Drag in the new one from the TrackWorkoutTracker folder
+### Look at the Left Sidebar (Project Navigator)
+You'll see a folder structure. Find these files:
 
-### File Structure Check
+### 2.1 Delete ContentView.swift
+- **Right-click** on `ContentView.swift`
+- Choose **Delete**
+- In the popup, click **"Move to Trash"** (not "Remove Reference")
 
-After adding files, your Xcode project should look like this:
+### 2.2 Delete Item.swift (if it exists)
+- **Right-click** on `Item.swift` (might not exist, that's OK)
+- Choose **Delete**
+- Click **"Move to Trash"**
+
+### 2.3 Keep TrackWorkoutTrackerApp.swift
+- We'll replace this file in the next step, but don't delete it yet
+
+---
+
+## STEP 3: Add My Code Files (5 minutes)
+
+Now we'll add the Swift files I wrote for you.
+
+### 3.1 Open Finder Side-by-Side
+- Open **Finder**
+- Navigate to: `/Users/liammurray/Hack-A-Thing-1/TrackWorkoutTracker/`
+- You should see folders: `Models`, `Views`, `Services`, etc.
+
+**Tip**: Arrange your windows so you can see both Finder and Xcode at the same time (split screen)
+
+### 3.2 Drag the Folders Into Xcode
+
+In **Xcode's left sidebar**, find the blue folder icon called `TrackWorkoutTracker` (at the top).
+
+Now, **one by one**, drag these folders from Finder into Xcode:
+
+#### A. Drag the **Models** folder
+- **Drag** the `Models` folder from Finder onto the `TrackWorkoutTracker` folder in Xcode
+- A dialog box will appear with checkboxes:
+  - ✅ **Check** "Copy items if needed"
+  - ✅ **Check** "Create groups" (should be selected by default)
+  - ✅ Make sure `TrackWorkoutTracker` target is checked
+  - Click **Finish**
+
+#### B. Drag the **Views** folder
+- Same process: drag `Views` folder into Xcode
+- Same checkboxes: ✅ Copy items, ✅ Create groups
+- Click **Finish**
+
+#### C. Drag the **Services** folder
+- Same process (even though it's empty for now)
+
+#### D. Drag the **Utilities** folder
+- Same process
+
+### 3.3 Replace TrackWorkoutTrackerApp.swift
+- In Xcode, **delete** the existing `TrackWorkoutTrackerApp.swift` (the one Xcode created)
+- From Finder, **drag** the NEW `TrackWorkoutTrackerApp.swift` (from the TrackWorkoutTracker folder) into Xcode
+- Same checkboxes: ✅ Copy items, ✅ Create groups
+- Click **Finish**
+
+### 3.4 Verify Your File Structure
+Your Xcode project navigator (left sidebar) should now look like this:
 
 ```
-TrackWorkoutTracker/
+TrackWorkoutTracker (blue folder)
 ├── TrackWorkoutTrackerApp.swift
 ├── Models/
 │   ├── WorkoutType.swift
@@ -77,104 +125,275 @@ TrackWorkoutTracker/
 │       ├── AddWorkoutView.swift
 │       ├── WorkoutListView.swift
 │       └── WorkoutDetailView.swift
+├── Services/
+├── Utilities/
 └── Assets.xcassets
 ```
 
-## Step 4: Build and Run (1 minute)
+---
 
-1. **Select a Simulator**:
-   - At the top of Xcode, click the device dropdown (next to the Run button)
-   - Choose any iPhone simulator (e.g., "iPhone 15 Pro")
+## STEP 4: Build and Run (1 minute)
 
-2. **Build and Run**:
-   - Press **Command + R** (or click the Play button)
-   - Xcode will build the app
-   - The iOS Simulator will launch with your app
+Time to see your app in action!
 
-3. **If you get errors**:
-   - Make sure all files are added to the target (check the File Inspector)
-   - Clean build folder: Product > Clean Build Folder
-   - Try building again
+### 4.1 Select a Simulator
+At the **very top of Xcode** (in the toolbar), you'll see a device dropdown next to a Play button.
 
-## Step 5: Test the App
+- Click that dropdown
+- Choose any iPhone (e.g., **iPhone 15 Pro**)
 
-Once running, you should see:
+### 4.2 Run the App
+- Press **Command + R** on your keyboard
 
-1. **Empty State**: "No Workouts Yet" with a + button
-2. **Tap the + button**: Opens the "Add Workout" form
-3. **Fill out a workout**:
-   - Choose a date
-   - Select workout type (Sprint, Middle Distance, etc.)
-   - Enter a title (e.g., "Morning 400m Repeats")
-   - Set number of reps
-   - Enter distance and duration for each rep
-   - Add notes (optional)
-   - Tap **Save**
-4. **View Your Workout**: Should appear in the list
-5. **Tap the Workout**: Opens detailed view showing all stats and reps
+  OR
 
-## Phase 1 Verification Checklist
+- Click the **▶ Play button** at the top left
 
-- [ ] Can create new workout manually
-- [ ] Workout saves to SwiftData
-- [ ] Workouts appear in list sorted by date
-- [ ] Tap workout shows detail view
-- [ ] Dates and times display correctly
-- [ ] Can delete workouts (swipe left on a workout)
-- [ ] Stats calculate correctly (distance, duration, pace)
+### 4.3 Wait for Build
+- Xcode will compile your code (takes 10-30 seconds first time)
+- The iOS Simulator will launch (a fake iPhone on your screen)
+- Your app will appear!
 
-## What You've Built (Phase 1 Complete!)
-
-You now have a working iOS app that can:
-- ✅ Manually log workouts with multiple repetitions
-- ✅ Track distance, duration, and pace for each rep
-- ✅ View workout history in a list
-- ✅ See detailed breakdown of each workout
-- ✅ Store data persistently with SwiftData
-- ✅ Delete workouts
-
-## Next Steps (Phase 2: Timer)
-
-Once you've tested Phase 1 and everything works, let me know and I can write the Phase 2 code which adds:
-- Real-time timer during workouts
-- Live tracking with lap button
-- Start/stop/pause functionality
-- Auto-calculated split times
-
-## Troubleshooting
-
-### Build Errors
-
-**"Cannot find type 'Workout' in scope"**
-- Make sure all Model files are added to the target
-- Check: File Inspector > Target Membership checkbox
-
-**"No such module 'SwiftData'"**
-- Make sure minimum deployment target is iOS 17.0 or higher
-- Check: Project Settings > General > Minimum Deployments
-
-**Files not appearing in Xcode**
-- Make sure you selected "Create groups" not "Create folder references"
-- Try removing and re-adding the files
-
-### Runtime Errors
-
-**App crashes on launch**
-- Check the Console output in Xcode (bottom panel)
-- Look for SwiftData errors
-- Make sure all models have @Model macro
-
-**Workouts not saving**
-- Check that modelContainer is attached to WindowGroup in TrackWorkoutTrackerApp.swift
-- Verify modelContext is being used in AddWorkoutView
-
-## Need Help?
-
-If you run into any issues:
-1. Check the Xcode Console output (View > Debug Area > Activate Console)
-2. Look for red error messages
-3. Let me know what error you're seeing
+### 4.4 If You Get Errors
+Don't panic! Try this:
+1. **Clean the build**: Menu bar → **Product** → **Clean Build Folder**
+2. Try running again (Command + R)
+3. If still errors, check the Troubleshooting section below
 
 ---
 
-**Congratulations!** You've completed Phase 1 of your track and field workout tracker! 🎉
+## STEP 5: Test Your App
+
+### What You Should See
+
+#### First Screen: Empty State
+- You'll see text: **"No Workouts Yet"**
+- A runner icon
+- A **+ button** in the top right corner
+
+#### Click the + Button
+- A form appears titled **"Add Workout"**
+
+#### Fill Out a Sample Workout
+Try this example:
+1. **Date**: Keep today's date
+2. **Workout Type**: Select **Sprint**
+3. **Workout Title**: Type `Morning 400m Repeats`
+4. **Number of Reps**: Increase to **3** (using the stepper)
+5. **Rep 1**:
+   - Distance: `400`
+   - Duration: `65`
+6. **Rep 2**:
+   - Distance: `400`
+   - Duration: `63`
+7. **Rep 3**:
+   - Distance: `400`
+   - Duration: `64`
+8. **Notes**: `Felt great today!`
+9. Click **Save** (top right)
+
+#### Back to List
+- Your workout appears in the list!
+- Shows distance, time, and pace
+
+#### Tap the Workout
+- Opens a detailed view
+- Shows all 3 reps
+- Shows stats and pace for each rep
+- Shows your notes
+
+#### Try More Features
+- Swipe left on a workout → **Delete** button appears
+- Add more workouts with different types
+- View them all in the list
+
+---
+
+## ✅ Success Checklist
+
+Your app is working if you can:
+- [ ] Create a new workout with multiple reps
+- [ ] See it saved in the list
+- [ ] Tap it to see full details
+- [ ] See calculated pace for each rep
+- [ ] Swipe left to delete workouts
+- [ ] Add notes to workouts
+- [ ] See different workout types
+
+---
+
+## 🎉 What You've Built (Phase 1 Complete!)
+
+If everything works, you now have a real iOS app with:
+- ✅ Manual workout logging with multiple repetitions
+- ✅ Distance, duration, and pace tracking
+- ✅ Workout history sorted by date
+- ✅ Detailed workout view with rep breakdown
+- ✅ Persistent data storage with SwiftData
+- ✅ Delete functionality
+- ✅ Beautiful SwiftUI interface
+- ✅ Notes for each workout
+
+This is a **fully functional app** you can actually use!
+
+---
+
+## 🚀 What's Next? (Phase 2: Timer)
+
+Once Phase 1 is working and tested, let me know and I'll write **Phase 2** code which adds:
+- ⏱️ **Real-time timer** for live workouts
+- 🏃 **Track as you run** with automatic timing
+- ⏸️ **Start/Stop/Pause** buttons
+- 📊 **Automatic lap splits** for each rep
+- 🎯 **Live pace calculations** while running
+
+---
+
+## ⚠️ Troubleshooting
+
+### Common Build Errors
+
+#### Error: "Cannot find type 'Workout' in scope"
+**Cause**: Files aren't added to the build target
+
+**Fix**:
+1. Click on any Swift file (like `Workout.swift`) in the Project Navigator
+2. Look at the **right sidebar** (if not visible: View → Inspectors → Show File Inspector)
+3. Find the **Target Membership** section
+4. Make sure `TrackWorkoutTracker` checkbox is checked
+5. Repeat for all Swift files showing errors
+
+#### Error: "No such module 'SwiftData'"
+**Cause**: Deployment target is too old
+
+**Fix**:
+1. Click on the **blue project icon** at the top of the Project Navigator
+2. Select **TrackWorkoutTracker** under TARGETS
+3. Click **General** tab
+4. Find **Minimum Deployments**
+5. Change iOS version to **17.0** or higher
+
+#### Error: "Multiple commands produce..."
+**Cause**: Duplicate files in the project
+
+**Fix**:
+1. Check if you have duplicate `ContentView.swift` or `TrackWorkoutTrackerApp.swift` files
+2. Delete duplicates (keep only one of each)
+3. Clean build folder: Product → Clean Build Folder
+4. Build again
+
+#### Files not appearing in Xcode
+**Cause**: Wrong import method
+
+**Fix**:
+1. Remove the files/folders from Xcode
+2. Re-drag them from Finder
+3. This time make sure to select **"Create groups"** NOT "Create folder references"
+4. Groups show as yellow folders, references show as blue folders
+
+### Common Runtime Errors
+
+#### App crashes immediately on launch
+**Symptoms**: Simulator opens but app crashes right away
+
+**Fix**:
+1. Look at the **Console** at the bottom of Xcode (View → Debug Area → Activate Console)
+2. Look for error messages mentioning SwiftData or models
+3. Common causes:
+   - Models missing @Model macro (check `Workout.swift` and `WorkoutRep.swift`)
+   - ModelContainer not configured correctly in `TrackWorkoutTrackerApp.swift`
+
+#### Workouts not saving / disappearing after restart
+**Symptoms**: Can create workouts but they don't persist
+
+**Fix**:
+1. Make sure `modelContainer` is attached to `WindowGroup` in `TrackWorkoutTrackerApp.swift`
+2. Check that views are using `@Environment(\.modelContext)` correctly
+3. Verify `modelContext.insert(workout)` is called in `AddWorkoutView.swift:saveWorkout()`
+
+#### Simulator won't launch
+**Symptoms**: Build succeeds but simulator doesn't open
+
+**Fix**:
+1. Make sure you selected a **simulator device** (not "Any iOS Device")
+2. Try a different simulator: Click device dropdown → select different iPhone
+3. Restart Xcode if needed
+
+#### Build takes forever (spinning wheel)
+**Symptoms**: Build never completes
+
+**Fix**:
+1. First build can take 1-2 minutes (be patient!)
+2. If it's been > 3 minutes: Stop (Command + .)
+3. Clean build: Product → Clean Build Folder
+4. Build again (Command + R)
+
+---
+
+## 💡 Tips & Tricks
+
+### Xcode Shortcuts
+- **Command + R**: Run/Build the app
+- **Command + .**: Stop running app
+- **Command + B**: Build without running
+- **Command + Shift + K**: Clean build folder
+
+### SwiftUI Previews
+Each Swift file has a `#Preview` at the bottom. You can see live previews:
+1. Open any View file (like `AddWorkoutView.swift`)
+2. Look for the **Canvas** on the right side
+3. If not visible: Editor → Canvas
+4. Click **Resume** button to see live preview
+5. Previews update as you edit code!
+
+### Debugging
+- Add `print("Debug message")` anywhere in your code
+- Run the app
+- Messages appear in the Console (bottom of Xcode)
+- Example: `print("Saving workout: \(workout.title)")`
+
+---
+
+## 📱 Testing on a Real iPhone (Optional)
+
+Want to run on your actual iPhone?
+
+1. **Connect your iPhone** to your Mac with a cable
+2. **Select your iPhone** from the device dropdown (it will appear when connected)
+3. **Trust your Mac** (popup on iPhone if first time)
+4. **Run the app** (Command + R)
+5. If you get a signing error:
+   - Go to Project Settings → Signing & Capabilities
+   - Check "Automatically manage signing"
+   - Select your Team (Apple ID)
+
+GPS tracking (Phase 4) requires a real device!
+
+---
+
+## 📚 Learning Resources
+
+As you work with the code:
+- [Apple's SwiftUI Tutorials](https://developer.apple.com/tutorials/swiftui) - Official beginner guide
+- [Hacking with Swift](https://www.hackingwithswift.com/100/swiftui) - Free 100 Days course
+- [SwiftData Documentation](https://developer.apple.com/documentation/swiftdata) - Learn about data persistence
+
+---
+
+## 🆘 Still Stuck?
+
+If you're still having issues:
+1. **Check the Console**: View → Debug Area → Activate Console
+2. **Read error messages** carefully (they usually tell you what's wrong)
+3. **Take a screenshot** of any errors
+4. **Let me know** what error you're seeing and I'll help!
+
+---
+
+## 🎊 Congratulations!
+
+Once you see your first workout in the app, you've officially built your first iOS app! This is a **real, functional application** with data persistence, multiple screens, and calculations.
+
+**You're now an iOS developer!** 🚀
+
+Ready for Phase 2 when you are!

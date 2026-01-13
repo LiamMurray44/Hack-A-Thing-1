@@ -1,0 +1,19 @@
+# Written by Claude Code on 2026-01-12
+# User prompt: write a .gitignore file to hide CLAUDE.md
+
+# Hide CLAUDE.md
+CLAUDE.md
+
+# macOS
+.DS_Store
+
+# Xcode
+xcuserdata/
+*.xcuserstate
+
+# Swift Package Manager
+.swiftpm/
+
+# Build products
+build/
+DerivedData/

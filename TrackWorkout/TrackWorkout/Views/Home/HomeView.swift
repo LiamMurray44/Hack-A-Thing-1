@@ -294,9 +294,13 @@ struct ActionButton: View {
                     Text(title)
                         .font(.headline)
                         .foregroundColor(.primary)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.8)
                     Text(subtitle)
                         .font(.caption)
                         .foregroundColor(.secondary)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.8)
                 }
 
                 Spacer()

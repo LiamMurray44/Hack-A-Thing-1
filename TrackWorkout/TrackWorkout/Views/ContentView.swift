@@ -31,6 +31,11 @@ struct ContentView: View {
                 .tabItem {
                     Label("Progress", systemImage: "chart.xyaxis.line")
                 }
+
+            MotivationalQuotesView()
+                .tabItem {
+                    Label("Motivation", systemImage: "quote.bubble")
+                }
         }
     }
 }

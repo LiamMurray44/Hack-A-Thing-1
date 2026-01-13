@@ -56,7 +56,7 @@ struct WorkoutDetailView: View {
                         )
                     }
 
-                    if let pace = workout.averagePace {
+                    if workout.averagePace != nil {
                         StatCard(
                             icon: "gauge",
                             title: "Average Pace",

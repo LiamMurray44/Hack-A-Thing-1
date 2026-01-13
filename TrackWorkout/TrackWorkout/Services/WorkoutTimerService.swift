@@ -272,7 +272,7 @@ class WorkoutTimerService {
         let workoutData: [String: Any] = [
             "workoutType": workoutType.rawValue,
             "workoutTitle": workoutTitle,
-            "completedReps": try? JSONEncoder().encode(completedReps),
+            "completedReps": (try? JSONEncoder().encode(completedReps)) as Any,
             "state": stateString(state),
             "workoutStartTime": workoutStartTime as Any,
             "currentRepStartTime": currentRepStartTime as Any,

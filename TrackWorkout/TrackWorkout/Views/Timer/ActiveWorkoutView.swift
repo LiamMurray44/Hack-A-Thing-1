@@ -60,7 +60,7 @@ struct ActiveWorkoutView: View {
             Text(formatTime(timerService.currentRepElapsedTime))
                 .font(.system(size: 72, design: .monospaced))
                 .fontWeight(.bold)
-                .foregroundStyle(timerService.state == .running ? .primary : .orange)
+                .foregroundStyle(timerService.state == .running ? .primary : Color.orange)
 
             // Total elapsed time (smaller)
             VStack(spacing: 4) {

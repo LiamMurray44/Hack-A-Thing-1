@@ -7,18 +7,29 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
     var body: some View {
         TabView {
-            WorkoutListView()
+            HomeView()
                 .tabItem {
-                    Label("Workouts", systemImage: "figure.run")
+                    Label("Home", systemImage: "house.fill")
                 }
 
             LiveWorkoutView()
                 .tabItem {
                     Label("Timer", systemImage: "stopwatch")
+                }
+
+            WorkoutListView()
+                .tabItem {
+                    Label("Workouts", systemImage: "figure.run")
+                }
+
+            ProgressView()
+                .tabItem {
+                    Label("Progress", systemImage: "chart.xyaxis.line")
                 }
         }
     }

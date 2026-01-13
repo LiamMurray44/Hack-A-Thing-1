@@ -47,22 +47,22 @@ struct WorkoutSummaryView: View {
                 }
 
                 // Summary stats
-                HStack(spacing: 12) {
-                    StatCard(
+            HStack(spacing: 12) {
+                    WorkoutStatCard(
                         title: "Distance",
                         value: formattedDistance,
                         icon: "figure.run",
                         color: .blue
                     )
 
-                    StatCard(
+                    WorkoutStatCard(
                         title: "Duration",
                         value: formattedDuration,
                         icon: "clock.fill",
                         color: .green
                     )
 
-                    StatCard(
+                    WorkoutStatCard(
                         title: "Avg Pace",
                         value: formattedPace,
                         icon: "speedometer",
@@ -77,7 +77,7 @@ struct WorkoutSummaryView: View {
                         .fontWeight(.semibold)
 
                     ForEach(timerService.completedReps, id: \.repNumber) { rep in
-                        RepRowView(rep: rep)
+                        WorkoutRepRowView(rep: rep)
                     }
                 }
                 .padding(.vertical, 8)
@@ -202,7 +202,7 @@ struct WorkoutSummaryView: View {
 
 // MARK: - Supporting Views
 
-struct StatCard: View {
+struct WorkoutStatCard: View {
     let title: String
     let value: String
     let icon: String
@@ -230,7 +230,7 @@ struct StatCard: View {
     }
 }
 
-struct RepRowView: View {
+struct WorkoutRepRowView: View {
     let rep: CompletedRep
 
     var body: some View {
